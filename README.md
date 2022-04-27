@@ -1,1 +1,3 @@
-This enough proof? <iframe src="https://player.vimeo.com/video/703892702?h=58851cda95&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="400" height="300" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Videoleap-5E6EFD4E-E479-4003-9170-E420D975C9B9 (1).mov"></iframe>
+This enough proof? 
+
+<p align="center"><img src="https://vimeo.com/703892702" /></p>
