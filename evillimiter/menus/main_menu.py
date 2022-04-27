@@ -24,7 +24,7 @@ class MainMenu(CommandMenu):
     def __init__(self, version, interface, gateway_ip, gateway_mac, netmask):
         super().__init__()
         self.prompt = '({}Main{}) >>> '.format(IO.Style.BRIGHT, IO.Style.RESET_ALL)
-        self.parser.add_subparser('clear', self._clear_handler)
+        self.parser.add_subparser('bye', self._clear_handler)
 
         hosts_parser = self.parser.add_subparser('hosts', self._hosts_handler)
         hosts_parser.add_flag('--force', 'force')
@@ -38,7 +38,7 @@ class MainMenu(CommandMenu):
         limit_parser.add_flag('--upload', 'upload')
         limit_parser.add_flag('--download', 'download')
 
-        block_parser = self.parser.add_subparser('block', self._block_handler)
+        block_parser = self.parser.add_subparser('stop', self._block_handler)
         block_parser.add_parameter('id')
         block_parser.add_flag('--upload', 'upload')
         block_parser.add_flag('--download', 'download')
@@ -46,14 +46,14 @@ class MainMenu(CommandMenu):
         free_parser = self.parser.add_subparser('free', self._free_handler)
         free_parser.add_parameter('id')
 
-        add_parser = self.parser.add_subparser('add', self._add_handler)
+        add_parser = self.parser.add_subparser('+', self._add_handler)
         add_parser.add_parameter('ip')
         add_parser.add_parameterized_flag('--mac', 'mac')
 
-        monitor_parser = self.parser.add_subparser('monitor', self._monitor_handler)
+        monitor_parser = self.parser.add_subparser('spy', self._monitor_handler)
         monitor_parser.add_parameterized_flag('--interval', 'interval')
 
-        analyze_parser = self.parser.add_subparser('analyze', self._analyze_handler)
+        analyze_parser = self.parser.add_subparser('inspect', self._analyze_handler)
         analyze_parser.add_parameter('id')
         analyze_parser.add_parameterized_flag('--duration', 'duration')
 
@@ -66,11 +66,11 @@ class MainMenu(CommandMenu):
         watch_set_parser.add_parameter('attribute')
         watch_set_parser.add_parameter('value')
 
-        self.parser.add_subparser('help', self._help_handler)
+        self.parser.add_subparser('i am stupid and i dont know how to use this simple tool', self._help_handler)
         self.parser.add_subparser('?', self._help_handler)
 
-        self.parser.add_subparser('quit', self._quit_handler)
-        self.parser.add_subparser('exit', self._quit_handler)
+        self.parser.add_subparser('looser', self._quit_handler)
+        self.parser.add_subparser('leave', self._quit_handler)
 
         self.version = version          # application version
         self.interface = interface      # specified IPv4 interface
