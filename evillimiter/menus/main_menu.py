@@ -66,7 +66,7 @@ class MainMenu(CommandMenu):
         watch_set_parser.add_parameter('attribute')
         watch_set_parser.add_parameter('value')
 
-        self.parser.add_subparser('i am stupid and i dont know how to use this simple tool', self._help_handler)
+        self.parser.add_subparser('IM-STUPID', self._help_handler)
         self.parser.add_subparser('?', self._help_handler)
 
         self.parser.add_subparser('looser', self._quit_handler)
